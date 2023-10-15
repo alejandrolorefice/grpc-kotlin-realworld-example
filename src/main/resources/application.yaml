@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: "jdbc:postgresql://${POSTGRES_HOST:localhost}:5432/realworld"
+    username: user
+    password: secretpassword
+    hikari:
+      maximumPoolSize: 4
+      minimumIdle: 1
+      keepaliveTime: 50000
+      maxLifetime: 60000
+  flyway:
+    enabled: false
+    clean-disabled: true
+  jooq:
+    sql-dialect: postgres
